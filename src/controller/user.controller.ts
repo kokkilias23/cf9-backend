@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import { Request, Response, NextFunction } from "express";
-import * as userService from '../services/user.service';
-
-
-export const create = async (req: Request, res: Response, next: NextFunction)           => {
-    try {
-        const user = await userService.createUser(req.body);
-         res.status(201).json({status: true, data: user});
- 
-   
-    } catch (error) {
-        next(error);
-    } };
-=======
 import { Request, Response, NextFunction } from 'express';
 import * as userService from '../services/user.service';
 import { UpdateUserDTO } from '../dto/user.dto';
@@ -61,4 +46,3 @@ export const update = async(req: Request, res: Response, next: NextFunction) => 
   } 
 
 }
->>>>>>> 8774fe84a0c7f097bfa0ccc50c963b6957b6c2eb

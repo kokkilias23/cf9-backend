@@ -94,3 +94,7 @@ export const updateUser = async(username: string, payload: UpdateUserDTO) =>{
   return user; 
 >>>>>>> 8774fe84a0c7f097bfa0ccc50c963b6957b6c2eb
 }
+
+export function findUsers() {
+  throw new Error('Function not implemented.');
+}
