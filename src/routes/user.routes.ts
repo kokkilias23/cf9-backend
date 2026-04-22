@@ -69,7 +69,7 @@ router.get('/email/:email', userCtrl.getOneByEmail);
  *        description: User created 
  * 
  */
-router.post('/',authenticate, hasReaderRole, validate(createUserSchema), userCtrl.create);
+router.post('/', validate(createUserSchema), userCtrl.create);
 router.put('/:username', userCtrl.update);
 
 export default router;

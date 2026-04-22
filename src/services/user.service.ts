@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import User, {IUser} from '../models/user.model';
-import Role, {IRole}  from '../models/role.model';  
-
-import { Types } from 'mongoose';
-
-export const createUser = async (payload: IUser) => {
-    console.log("payload", payload);
-    return payload.roles.map(async (roleId) => {
-        const role = await Role.findById(roleId);
-        if (!role) {
-            throw new Error(`Role with id ${roleId} not found`);
-        } else {
-            const user = new User(payload);
-            return await user.save();
-        }   });
-=======
 import User, { IUser } from '../models/user.model';
 import Role, { IRole } from '../models/role.model';
 import { Types } from 'mongoose';
@@ -92,9 +75,4 @@ export const updateUser = async(username: string, payload: UpdateUserDTO) =>{
 
   const user = await userDAO.updateUser(username, updateData);
   return user; 
->>>>>>> 8774fe84a0c7f097bfa0ccc50c963b6957b6c2eb
-}
-
-export function findUsers() {
-  throw new Error('Function not implemented.');
 }
