@@ -11,7 +11,9 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({ origin:['http://localhost:4200','http://render.cccccc.com'] }));
+app.use(cors({
+  origin:['http://localhost:4200', 'http://render.cccccc.com']  
+}))
 
 setupSwagger(app);
 app.use(express.json())
